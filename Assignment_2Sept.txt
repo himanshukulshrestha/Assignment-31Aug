@@ -1,0 +1,90 @@
+1. Create an array with five scores out of 100, compute the average of the scores and compute percentage.
+
+class ArrayScores {
+    public static void main(String[] args) {
+ 
+       float sum = 0.0f;
+        int[] scores = {67,89,87,65,78};
+        for(int i = 0;i<scores.length;i++){
+            
+            sum = sum + scores[i];
+            
+        }
+        System.out.print("avg="+sum/scores.length);
+        System.out.println("percentage="+sum/scores.length);
+       
+    }
+}
+
+------------------------------------------------------------------------------------------------------------
+
+2. Create two 3 X 3 matrices and perform multiplication of matrices.
+
+class MultiplicationArray {
+    public static void main(String[] args) {
+ 
+int a[][]={{1,2,3},{4,5,6},{7,8,9}};
+int b[][]={{1,2,3},{4,5,6},{7,8,9}};
+int c[][]= new int[3][3];
+
+
+for(int i = 0 ; i <3;i++){
+ for(int j=0;j<3;j++){
+    for(int k = 0 ; k<3;k++){
+  
+  c[i][j]+= a[i][k]*b[k][j];
+  
+        
+    } 
+    System.out.print(c[i][j]+" ");
+ }  
+ System.out.println();
+    }
+  
+    }
+
+}
+
+------------------------------------------------------------------------------------------------------------
+
+3. Create a variable of type String with following data,
+
+
+   String data="Java is Object oriented. Java is platform independent.Java is simple."
+
+
+Search for word "Java" and count number of occurrences.
+
+class CountString {
+    public static void main(String[] args) {
+        String data="Java is Object oriented. Java is platform independent. Java is simple";
+        
+        String[] strArray = data.split("\\s");
+        int i =0;
+        String s = "Java";
+       for(String word:strArray){
+        
+           if(word.equals(s))
+           i++;
+       }
+       System.out.print(i);
+    }
+}
+
+------------------------------------------------------------------------------------------------------------
+
+4. Create an array of type int with 10 elements.
+ 
+  int array[]={8,2,3,1,6,5,7};
+
+Sort the array in descending order.
+
+class SortDescArray {
+    public static void main(String[] args) {
+        int array[]={8,2,3,1,6,5,7,9,55,34};
+      Arrays.sort(array);  
+        for(int i = array.length;i<=0;i--){
+            System.out.println(array[i]);
+        }
+    }
+}
