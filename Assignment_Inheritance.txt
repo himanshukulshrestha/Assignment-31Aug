@@ -1,0 +1,75 @@
+Identify Entities and sub entities ,their attributes and methods in Student Management System.
+
+Entities :-
+USER -IS-A- Student, Faculty, Admin
+Course
+Fees -IS-A- Exam, Course
+Department 
+Exam
+
+
+Methods - Registration, Login, Enrollment, Getter Setter of User
+
+User --(IS-A)-- Student
+     --(IS-A)--	Faculty
+
+ Student(Entity) - Attributes -
+	RegNo
+        Name - FirstName, MiddleNAme, LastName (SubEntities)
+	DOB
+	Gender
+	Contact
+	Add - Country, State, City, PinCode (SubENtitties)
+	OtherDetails
+
+ Faculty(Entity) - Attributes -
+	RegNo
+        Name - FirstName, MiddleNAme, LastName (SubEntities)
+	DOB
+	Gender
+	Contact
+	Add - Country, State, City, PinCode (SubENtitties)
+	OtherDetails
+
+ Admin(Entity) - Attributes -
+	RegNo
+        Name - FirstName, MiddleNAme, LastName (SubEntities)
+	DOB
+	Gender
+	Contact
+	Add - Country, State, City, PinCode (SubENtitties)
+	OtherDetails
+
+ Fees(Entity) - Attributes -
+	CourseFee
+	ExamFee
+ 
+ Course(Entity) - Attributes -
+	CourseName
+	CourseFee
+	Tenure
+	FacultyName
+
+ Enrolled Courses(Entity) - Attributes -
+	id
+	name
+	EnrolledDate
+	LastDate
+	FacultyNAme
+
+ Exam(Entity) - Attributes -
+	ExamName
+	ExamFees
+	ExamDate
+
+ Department(Entity) - Attributes -
+	ID
+	DepartmentName
+	Contact
+
+
+
+
+
+
+
