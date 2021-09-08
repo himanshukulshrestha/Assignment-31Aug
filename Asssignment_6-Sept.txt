@@ -1,0 +1,166 @@
+1.  Replace a character a with e in following string without using inbuilt method.
+
+  Halo
+
+  Replace character at 3rd index pos in upper case.
+
+public class ReplaceString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str = "Halo";
+		
+		System.out.println(str.replace('a','e'));
+		int i = str.length();
+		char h[] = new char[i];
+		h = str.toCharArray();
+		Character.toUpperCase(h[3]);
+		System.out.println(Character.toUpperCase(h[3]));
+		
+	}
+
+}
+
+
+2. Write a code to mask a given string.
+
+  for e.g 
+
+    SABBIR POONAWALA
+    SAXXXX POXXXXXXX
+
+public class MaskString {
+
+
+		 private static String maskString(String strText, int start, int end, char maskChar)
+			        throws Exception{
+			        
+			        if(strText == null || strText.equals(""))
+			            return "";
+			        
+			        if(start < 0)
+			            start = 0;
+			        
+			        if( end > strText.length() )
+			            end = strText.length();
+			            
+			        if(start > end)
+			            throw new Exception("End index cannot be greater than start index");
+			        
+			        int maskLength = end - start;
+			        
+			        if(maskLength == 0)
+			            return strText;
+			        
+			        String strMaskString = StringUtils.repeat(maskChar, maskLength);
+			        
+			        return StringUtils.overlay(strText, strMaskString, start, end);
+			    }
+			public static void  main(String[] args) {
+				
+				String str = "SABBIR POONAWALA";
+				System.out.println( maskString(str, 2, 15, '*') );
+
+	}
+}
+
+3. Check if given string starts with A and Endwith t.
+
+public class CheckString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "start";
+		str = str.trim();
+		if(str.startsWith("A"))
+		System.out.println("starts with : A");
+		else
+			System.out.println("Not starts with A");
+		
+		if(str.endsWith("t"))
+			System.out.println("ends with : t");
+		else
+			System.out.println("Not ends with : t");
+	}
+
+}
+
+4. Create a class Student with following attributes
+   
+   Student
+ =============
+   rollNo int
+   studentFirstName String
+   studentLastName  String
+   studentAge int
+ 
+ Override toString(),equals(),hashCode() without using tool.
+
+
+public class Student {
+	
+
+		int rollNo;
+		String studentFirstName;
+		String studentLastName;
+		int studentAge;
+		
+		public Student(int rollNo, String studentFirstName, String studentLastName, int studentAge) {
+			super();
+			this.rollNo = rollNo;
+			this.studentFirstName = studentFirstName;
+			this.studentLastName = studentLastName;
+			this.studentAge = studentAge;
+		}
+
+		@Override
+		public int hashCode() {
+			final int prime = 31;
+			int result = 1;
+			result = prime * result + rollNo;
+			result = prime * result + studentAge;
+			result = prime * result + ((studentFirstName == null) ? 0 : studentFirstName.hashCode());
+			result = prime * result + ((studentLastName == null) ? 0 : studentLastName.hashCode());
+			return result;
+		}
+		
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Student other = (Student) obj;
+			if (rollNo != other.rollNo)
+				return false;
+			if (studentAge != other.studentAge)
+				return false;
+			if (studentFirstName == null) {
+				if (other.studentFirstName != null)
+					return false;
+			} else if (!studentFirstName.equals(other.studentFirstName))
+				return false;
+			if (studentLastName == null) {
+				if (other.studentLastName != null)
+					return false;
+			} else if (!studentLastName.equals(other.studentLastName))
+				return false;
+			return true;
+		}
+		
+		public String toString() {
+			return "Student [rollNo=" + rollNo + ", studentFirstName=" + studentFirstName + ", studentLastName="
+					+ studentLastName + ", studentAge=" + studentAge + "]";
+		}
+
+}
+
+5 Identify classes(java.lang) from API Documentation which can be used for static import.
+
+
+
+
+
