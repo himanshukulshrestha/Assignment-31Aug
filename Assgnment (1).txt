@@ -1,0 +1,48 @@
+
+Create an interface with functionality of calculating simple interest,compound interest on principal amount based on given interest rates.
+public interface Interest
+{
+    double calculateSI(double principle,double rate,double time);
+    double calculateCI(double principle,double rate,double time);
+	 
+}
+import java.util.Scanner;
+
+public class CalculateCIandPi implements Calculation
+{
+	public double SI=0;
+	public double CI=0;
+	@override
+	public double calculateSI(double principle,double rate,double time) 
+		{
+			SI= (principle*rate*time)/100;
+			return SI;
+		}
+
+		@Override
+		public double calculateCI(double principle,double rate,double time) 
+		{
+			CI = principle * Math.pow(1.0+rate/100.0,time);
+			return CI;
+		}
+	
+		public static void main(String[] args) 
+		{
+		
+			CalculateCIandPi Obj = new CalculateCIandPi();
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("Enter principle ");
+			double  principle = sc.nextDouble();
+			System.out.println("Enter rate");
+			double  rate = sc.nextDouble();
+			System.out.println("Enter time");
+			double  time = sc.nextDouble();
+		
+			System.out.println("Simple Intrest :"+Obj.calculateSI(principle,rate,time));
+			System.out.println("Compound Intrest :"+Obj.calculateCI(principle,rate,time));
+		}
+}
+
+
+
